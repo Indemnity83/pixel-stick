@@ -1,5 +1,6 @@
 .DS_Store
 fp-info-cache
 gerbers.zip
+pixel-stick-cache.lib
 *-bak
-
+*.bak
