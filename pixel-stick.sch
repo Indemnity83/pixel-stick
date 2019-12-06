@@ -334,9 +334,9 @@ Wire Wire Line
 Text Label 10250 1050 0    50   ~ 0
 VIN
 Text Label 10250 1150 0    50   ~ 0
-DATA
-Text Label 10250 1250 0    50   ~ 0
 CLOCK
+Text Label 10250 1250 0    50   ~ 0
+DATA
 Text Label 10250 1350 0    50   ~ 0
 GND
 $Comp
