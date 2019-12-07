@@ -388,27 +388,10 @@ Text Notes 8700 2500 0    157  ~ 0
 Input / Protection
 Wire Notes Line
 	4550 500  4550 5050
-$Comp
-L power:+5V #PWR0118
-U 1 1 5DF29F02
-P 6300 3100
-F 0 "#PWR0118" H 6300 2950 50  0001 C CNN
-F 1 "+5V" V 6315 3228 50  0000 L CNN
-F 2 "" H 6300 3100 50  0001 C CNN
-F 3 "" H 6300 3100 50  0001 C CNN
-	1    6300 3100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5800 3600 5150 3600
-Text Label 5150 3600 0    50   ~ 0
-GPIO2
-Text Label 7150 3600 2    50   ~ 0
-DATA
-Text Notes 5900 4750 0    157  ~ 0
-Digital IO
+Text Notes 6650 4950 0    157  ~ 0
+Logic Level Shifters
 Wire Notes Line
-	4550 4800 8600 4800
+	4550 5050 11200 5000
 $Comp
 L Connector_Generic:Conn_01x04 J2
 U 1 1 5DF54B71
@@ -425,94 +408,6 @@ Wire Wire Line
 Connection ~ 9300 1400
 Wire Wire Line
 	9300 1400 9300 1600
-Wire Notes Line
-	8600 2550 8600 4800
-$Comp
-L Device:Net-Tie_2 NT1
-U 1 1 5E05448E
-P 7900 3650
-F 0 "NT1" H 7900 3831 50  0001 C CNN
-F 1 "Net-Tie_2" H 7900 3740 50  0001 C CNN
-F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 7900 3650 50  0001 C CNN
-F 3 "~" H 7900 3650 50  0001 C CNN
-	1    7900 3650
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7900 3750 7900 4050
-Wire Wire Line
-	7900 3550 7900 3200
-Text Label 7900 3200 3    50   ~ 0
-GPIO0
-Text Label 7900 4050 1    50   ~ 0
-CLOCK
-$Comp
-L Logic_LevelTranslator:SN74LVC1T45DBV U3
-U 1 1 5E0703F4
-P 6200 3600
-F 0 "U3" H 5850 3950 50  0000 L CNN
-F 1 "SN74LVC1T45DBV" H 6400 3950 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6200 3150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf" H 5300 2950 50  0001 C CNN
-	1    6200 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0120
-U 1 1 5E0791D1
-P 6100 3100
-F 0 "#PWR0120" H 6100 2950 50  0001 C CNN
-F 1 "+3.3V" V 6115 3228 50  0000 L CNN
-F 2 "" H 6100 3100 50  0001 C CNN
-F 3 "" H 6100 3100 50  0001 C CNN
-	1    6100 3100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6300 3200 6300 3100
-Wire Wire Line
-	6100 3200 6100 3100
-$Comp
-L power:GND #PWR0121
-U 1 1 5E089664
-P 6200 4150
-F 0 "#PWR0121" H 6200 3900 50  0001 C CNN
-F 1 "GND" H 6205 3977 50  0000 C CNN
-F 2 "" H 6200 4150 50  0001 C CNN
-F 3 "" H 6200 4150 50  0001 C CNN
-	1    6200 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5800 3800 5700 3800
-Wire Wire Line
-	6200 4000 6200 4150
-$Comp
-L power:+3.3V #PWR0122
-U 1 1 5E093366
-P 5250 3800
-F 0 "#PWR0122" H 5250 3650 50  0001 C CNN
-F 1 "+3.3V" V 5265 3928 50  0000 L CNN
-F 2 "" H 5250 3800 50  0001 C CNN
-F 3 "" H 5250 3800 50  0001 C CNN
-	1    5250 3800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 5E095D7B
-P 5550 3800
-F 0 "R3" V 5450 3800 50  0000 C CNN
-F 1 "10k" V 5650 3800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 5480 3800 50  0001 C CNN
-F 3 "~" H 5550 3800 50  0001 C CNN
-	1    5550 3800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5400 3800 5250 3800
-Wire Wire Line
-	6600 3600 7150 3600
 $Comp
 L power:+3.3V #PWR0123
 U 1 1 5DED69A9
@@ -570,4 +465,107 @@ Wire Wire Line
 Wire Wire Line
 	1850 3700 1850 3550
 Connection ~ 1850 3550
+$Comp
+L Transistor_FET:BSS138 Q2
+U 1 1 5DF7DAE3
+P 8950 4000
+F 0 "Q2" V 9201 4000 50  0000 C CNN
+F 1 "BSS138" V 9292 4000 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9150 3925 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 8950 4000 50  0001 L CNN
+	1    8950 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8750 4100 8600 4100
+Wire Wire Line
+	9150 4100 9250 4100
+$Comp
+L Device:R R3
+U 1 1 5DF7DAEB
+P 8600 3750
+F 0 "R3" V 8393 3750 50  0000 C CNN
+F 1 "10k" V 8484 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8530 3750 50  0001 C CNN
+F 3 "~" H 8600 3750 50  0001 C CNN
+	1    8600 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5DF7DAF1
+P 9250 3750
+F 0 "R5" V 9043 3750 50  0000 C CNN
+F 1 "10k" V 9134 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9180 3750 50  0001 C CNN
+F 3 "~" H 9250 3750 50  0001 C CNN
+	1    9250 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0115
+U 1 1 5DF7DAF7
+P 8600 3350
+F 0 "#PWR0115" H 8600 3200 50  0001 C CNN
+F 1 "+3.3V" V 8615 3478 50  0000 L CNN
+F 2 "" H 8600 3350 50  0001 C CNN
+F 3 "" H 8600 3350 50  0001 C CNN
+	1    8600 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0116
+U 1 1 5DF7DAFD
+P 9250 3350
+F 0 "#PWR0116" H 9250 3200 50  0001 C CNN
+F 1 "+5V" V 9265 3478 50  0000 L CNN
+F 2 "" H 9250 3350 50  0001 C CNN
+F 3 "" H 9250 3350 50  0001 C CNN
+	1    9250 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 3350 8600 3500
+Wire Wire Line
+	8600 3900 8600 4100
+Wire Wire Line
+	9250 3900 9250 4100
+Wire Wire Line
+	9250 3600 9250 3350
+Wire Wire Line
+	9250 4100 9600 4100
+Connection ~ 9250 4100
+Wire Wire Line
+	8600 4100 8300 4100
+Connection ~ 8600 4100
+Wire Wire Line
+	8600 3500 8950 3500
+Wire Wire Line
+	8950 3500 8950 3800
+Connection ~ 8600 3500
+Wire Wire Line
+	8600 3500 8600 3600
+Text Label 9450 4100 0    50   ~ 0
+DATA
+Text Label 8300 4100 0    50   ~ 0
+GPIO2
+$Comp
+L Device:Net-Tie_2 NT1
+U 1 1 5DFBBBD5
+P 6400 3900
+F 0 "NT1" H 6400 4081 50  0000 C CNN
+F 1 "Net-Tie_2" H 6400 3990 50  0000 C CNN
+F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 6400 3900 50  0001 C CNN
+F 3 "~" H 6400 3900 50  0001 C CNN
+	1    6400 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3900 6900 3900
+Wire Wire Line
+	6300 3900 5750 3900
+Text Label 5800 3900 0    50   ~ 0
+GPIO0
+Text Label 6850 3900 2    50   ~ 0
+CLOCK
 $EndSCHEMATC
