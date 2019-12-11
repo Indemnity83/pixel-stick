@@ -1,0 +1,158 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ESP8266:ESP-01v090 U?
+U 1 1 5DEEC696
+P 2850 2050
+F 0 "U?" H 2850 2565 50  0000 C CNN
+F 1 "ESP-01v090" H 2850 2474 50  0000 C CNN
+F 2 "" H 2850 2050 50  0001 C CNN
+F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 2850 2050 50  0001 C CNN
+	1    2850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5DEECCA9
+P 1750 4650
+F 0 "C?" H 1868 4696 50  0000 L CNN
+F 1 "CP" H 1868 4605 50  0000 L CNN
+F 2 "" H 1788 4500 50  0001 C CNN
+F 3 "~" H 1750 4650 50  0001 C CNN
+	1    1750 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF540N Q?
+U 1 1 5DEED0C8
+P 3700 5000
+F 0 "Q?" H 3906 5046 50  0000 L CNN
+F 1 "IRF540N" H 3906 4955 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3950 4925 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 3700 5000 50  0001 L CNN
+	1    3700 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5DEF0979
+P 3800 4300
+F 0 "C?" V 4055 4300 50  0000 C CNN
+F 1 "CP" V 3964 4300 50  0000 C CNN
+F 2 "" H 3838 4150 50  0001 C CNN
+F 3 "~" H 3800 4300 50  0001 C CNN
+	1    3800 4300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3950 4300 4650 4300
+Wire Wire Line
+	3800 4800 3800 4600
+Wire Wire Line
+	3800 4600 4650 4600
+Wire Wire Line
+	3500 5000 3200 5000
+Wire Wire Line
+	3800 5200 3800 5300
+Wire Wire Line
+	3800 5300 2650 5300
+Wire Wire Line
+	3650 4300 3200 4300
+Wire Wire Line
+	3200 4300 3200 5000
+Connection ~ 3200 5000
+Wire Wire Line
+	3200 5000 2650 5000
+Text Label 4550 4300 2    50   ~ 0
+RST
+Text Label 4550 4600 2    50   ~ 0
+GPIO0
+Text Label 2750 5000 0    50   ~ 0
+RTS
+Text Label 2750 5300 0    50   ~ 0
+DTR
+Wire Wire Line
+	1750 4500 1750 4100
+Wire Wire Line
+	1750 4800 1750 5250
+$Comp
+L power:GND #PWR?
+U 1 1 5DEF3B30
+P 1750 5250
+F 0 "#PWR?" H 1750 5000 50  0001 C CNN
+F 1 "GND" H 1755 5077 50  0000 C CNN
+F 2 "" H 1750 5250 50  0001 C CNN
+F 3 "" H 1750 5250 50  0001 C CNN
+	1    1750 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DEF42AD
+P 1750 4100
+F 0 "#PWR?" H 1750 3950 50  0001 C CNN
+F 1 "+3V3" H 1765 4273 50  0000 C CNN
+F 2 "" H 1750 4100 50  0001 C CNN
+F 3 "" H 1750 4100 50  0001 C CNN
+	1    1750 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DEF7E3F
+P 2850 2950
+F 0 "#PWR?" H 2850 2700 50  0001 C CNN
+F 1 "GND" H 2855 2777 50  0000 C CNN
+F 2 "" H 2850 2950 50  0001 C CNN
+F 3 "" H 2850 2950 50  0001 C CNN
+	1    2850 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DEF8241
+P 1850 1750
+F 0 "#PWR?" H 1850 1600 50  0001 C CNN
+F 1 "+3V3" H 1865 1923 50  0000 C CNN
+F 2 "" H 1850 1750 50  0001 C CNN
+F 3 "" H 1850 1750 50  0001 C CNN
+	1    1850 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2950 2850 2800
+Wire Wire Line
+	1850 1750 1850 2000
+Wire Wire Line
+	1850 2000 2100 2000
+Wire Wire Line
+	2100 2150 1850 2150
+Wire Wire Line
+	1850 2150 1850 2000
+Connection ~ 1850 2000
+Wire Wire Line
+	2100 2300 1700 2300
+Wire Wire Line
+	3600 2150 4000 2150
+Wire Wire Line
+	3600 2400 4000 2400
+Wire Wire Line
+	3600 2550 4000 2550
+Text Label 3950 2150 2    50   ~ 0
+GPIO0
+Text Label 1750 2300 0    50   ~ 0
+RST
+$EndSCHEMATC
