@@ -135,8 +135,6 @@ F 3 "~" H 3700 1650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3550 1650 3200 1650
-Text Label 3350 1650 2    50   ~ 0
-VIN
 $Comp
 L power:GND #PWR05
 U 1 1 5DEDF35C
@@ -176,7 +174,7 @@ F 3 "~" H 4150 2000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4150 2150 4150 2500
-Text Notes 1200 2200 0    50   ~ 0
+Text Notes 1200 2400 0    50   ~ 0
 VIN between 4.5 and 15VDC. \nData is 5V CMOS logic.
 Wire Wire Line
 	4150 1650 4150 1850
@@ -398,16 +396,51 @@ F 3 "~" H 1900 1700 50  0001 C CNN
 	1    1900 1700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1250 1600 1700 1600
-Text Label 1300 1800 0    50   ~ 0
-GND
 Text Label 1300 1700 0    50   ~ 0
 DATA
-Text Label 1300 1600 0    50   ~ 0
-VIN
-Wire Wire Line
-	1250 1800 1700 1800
 Wire Wire Line
 	1250 1700 1700 1700
+$Comp
+L power:VIN #PWR?
+U 1 1 5DFA6142
+P 1550 1500
+F 0 "#PWR?" H 1550 1350 50  0001 C CNN
+F 1 "VIN" H 1565 1673 50  0000 C CNN
+F 2 "" H 1550 1500 50  0001 C CNN
+F 3 "" H 1550 1500 50  0001 C CNN
+	1    1550 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DFA6D40
+P 1550 1900
+F 0 "#PWR?" H 1550 1650 50  0001 C CNN
+F 1 "GND" H 1555 1727 50  0000 C CNN
+F 2 "" H 1550 1900 50  0001 C CNN
+F 3 "" H 1550 1900 50  0001 C CNN
+	1    1550 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 1500 1550 1600
+Wire Wire Line
+	1550 1600 1700 1600
+Wire Wire Line
+	1550 1900 1550 1800
+Wire Wire Line
+	1550 1800 1700 1800
+$Comp
+L power:VIN #PWR?
+U 1 1 5DFAB074
+P 3200 1500
+F 0 "#PWR?" H 3200 1350 50  0001 C CNN
+F 1 "VIN" H 3215 1673 50  0000 C CNN
+F 2 "" H 3200 1500 50  0001 C CNN
+F 3 "" H 3200 1500 50  0001 C CNN
+	1    3200 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 1500 3200 1650
 $EndSCHEMATC
