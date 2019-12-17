@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:pixel-stick-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -80,17 +79,6 @@ Connection ~ 6300 1650
 Text Notes 4750 3100 0    157  ~ 0
 Power Management
 $Comp
-L Regulator_Linear:AP3602A U2
-U 1 1 5DEB2EA3
-P 7250 1450
-F 0 "U2" H 7250 1450 50  0000 C CNN
-F 1 "RT9361AGE" H 7250 1350 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 7250 1383 50  0001 C CNN
-F 3 "https://www.richtek.com/assets/product_file/RT9361A=RT9361B/DS9361AB-14.pdf" H 7250 1450 50  0001 C CNN
-	1    7250 1450
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR08
 U 1 1 5DEBAE40
 P 8350 2500
@@ -102,17 +90,17 @@ F 3 "" H 8350 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6750 1800 6650 1800
+	6800 1800 6650 1800
 Wire Wire Line
 	6650 1800 6650 1650
 Connection ~ 6650 1650
 Wire Wire Line
-	6650 1650 6750 1650
+	6650 1650 6800 1650
 Wire Wire Line
-	7750 1650 8350 1650
+	7700 1650 8350 1650
 Connection ~ 8350 1650
 Wire Wire Line
-	7750 1800 7900 1800
+	7700 1800 7900 1800
 Wire Wire Line
 	7900 1800 7900 2300
 Wire Wire Line
@@ -260,18 +248,13 @@ F 3 "https://www.onsemi.com/pub/Collateral/MC74VHC1GT125-D.PDF" H 7750 4900 50  
 $EndComp
 Text Notes 7100 6050 0    157  ~ 0
 Digital IO
-Connection ~ 2300 4600
-Wire Wire Line
-	2300 4750 2300 4600
-Wire Wire Line
-	2400 4750 2300 4750
 Text Notes 1850 6050 0    157  ~ 0
 WiFi Microcontroller
 Wire Wire Line
-	2300 4450 2250 4450
-Connection ~ 2300 4450
+	2300 4200 2250 4200
+Connection ~ 2300 4200
 Wire Wire Line
-	2300 4450 2300 4600
+	2300 4200 2300 4350
 Wire Wire Line
 	1350 5000 1350 5400
 Wire Wire Line
@@ -279,45 +262,43 @@ Wire Wire Line
 $Comp
 L power:+3.3V #PWR010
 U 1 1 5DEA7FFE
-P 2250 4450
-F 0 "#PWR010" H 2250 4300 50  0001 C CNN
-F 1 "+3.3V" V 2265 4578 50  0000 L CNN
-F 2 "" H 2250 4450 50  0001 C CNN
-F 3 "" H 2250 4450 50  0001 C CNN
-	1    2250 4450
+P 2250 4200
+F 0 "#PWR010" H 2250 4050 50  0001 C CNN
+F 1 "+3.3V" V 2265 4328 50  0000 L CNN
+F 2 "" H 2250 4200 50  0001 C CNN
+F 3 "" H 2250 4200 50  0001 C CNN
+	1    2250 4200
 	0    -1   -1   0   
 $EndComp
-Text Label 4000 5000 0    50   ~ 0
+Text Label 2050 4800 0    50   ~ 0
 RXD
-Text Label 4000 4850 0    50   ~ 0
+Text Label 2050 4650 0    50   ~ 0
 TXD
-Text Label 4000 4600 0    50   ~ 0
+Text Label 4350 4350 2    50   ~ 0
 GPIO0
-Text Label 4000 4450 0    50   ~ 0
+Text Label 4350 4200 2    50   ~ 0
 GPIO2
 Wire Wire Line
-	2400 4600 2300 4600
+	2400 4350 2300 4350
 Wire Wire Line
-	2400 4450 2300 4450
+	2400 4200 2300 4200
 Wire Wire Line
-	3900 5000 4250 5000
+	2050 4800 2400 4800
 Wire Wire Line
-	3900 4850 4250 4850
+	2050 4650 2400 4650
 Wire Wire Line
-	3900 4600 4250 4600
+	4000 4350 4350 4350
 Wire Wire Line
-	3900 4450 4250 4450
-Wire Wire Line
-	3150 5400 3150 5250
+	4000 4200 4350 4200
 $Comp
 L power:GND #PWR014
 U 1 1 5DEA2B31
-P 3150 5400
-F 0 "#PWR014" H 3150 5150 50  0001 C CNN
-F 1 "GND" H 3155 5227 50  0000 C CNN
-F 2 "" H 3150 5400 50  0001 C CNN
-F 3 "" H 3150 5400 50  0001 C CNN
-	1    3150 5400
+P 3200 5400
+F 0 "#PWR014" H 3200 5150 50  0001 C CNN
+F 1 "GND" H 3205 5227 50  0000 C CNN
+F 2 "" H 3200 5400 50  0001 C CNN
+F 3 "" H 3200 5400 50  0001 C CNN
+	1    3200 5400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -354,14 +335,14 @@ F 3 "~" H 1350 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ESP8266:ESP-01v090 ESP-01
+L ESP8266:ESP-01v090 ESP-1
 U 1 1 5DE9E498
-P 3150 4500
-F 0 "ESP-01" H 3150 5050 50  0000 C CNN
-F 1 "ESP-01v090" H 3150 4950 50  0000 C CNN
-F 2 "ESP8266:ESP-01" H 3150 4500 50  0001 C CNN
-F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 3150 4500 50  0001 C CNN
-	1    3150 4500
+P 3200 4400
+F 0 "ESP-1" H 3200 4950 50  0000 C CNN
+F 1 "ESP-01v090" H 3200 4850 50  0000 C CNN
+F 2 "ESP8266:ESP-01" H 3200 4400 50  0001 C CNN
+F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 3200 4400 50  0001 C CNN
+	1    3200 4400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -369,22 +350,22 @@ Wire Wire Line
 Wire Wire Line
 	4150 1650 4800 1650
 Wire Wire Line
-	6950 2400 6950 2150
+	7000 2450 7000 2200
 Wire Wire Line
-	7550 2150 7550 2400
+	7500 2200 7500 2450
 Wire Wire Line
-	7100 2400 6950 2400
+	7100 2450 7000 2450
 Wire Wire Line
-	7550 2400 7400 2400
+	7500 2450 7400 2450
 $Comp
 L Device:C C4
 U 1 1 5DEB5F38
-P 7250 2400
-F 0 "C4" V 7100 2400 50  0000 C CNN
-F 1 "1µF" V 7400 2400 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7288 2250 50  0001 C CNN
-F 3 "~" H 7250 2400 50  0001 C CNN
-	1    7250 2400
+P 7250 2450
+F 0 "C4" V 7100 2450 50  0000 C CNN
+F 1 "1µF" V 7400 2450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7288 2300 50  0001 C CNN
+F 3 "~" H 7250 2450 50  0001 C CNN
+	1    7250 2450
 	0    1    1    0   
 $EndComp
 $Comp
@@ -410,4 +391,17 @@ Wire Wire Line
 	1250 1800 1700 1800
 Wire Wire Line
 	1250 1700 1700 1700
+Wire Wire Line
+	3200 5250 3200 5400
+$Comp
+L ap3602a:AP3602A U2
+U 1 1 5E16BED2
+P 7250 1400
+F 0 "U2" H 7250 1392 50  0000 C CNN
+F 1 "AP3602A" H 7250 1301 50  0000 C CNN
+F 2 "" H 7250 1400 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Diodes%20PDFs/AP3602A_B.pdf" H 7250 1400 50  0001 C CNN
+	1    7250 1400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
