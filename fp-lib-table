@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name ESP8285)(type KiCad)(uri /Users/kklaus/Downloads/esp8285-kicad-library-master/ESP8285.pretty)(options "")(descr ""))
+)

@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name pixel-stick)(type Legacy)(uri ${KIPRJMOD}/pixel-stick.lib)(options "")(descr ""))
+  (lib (name ESP8285)(type Legacy)(uri /Users/kklaus/Downloads/esp8285-kicad-library-master/ESP8285.lib)(options "")(descr ""))
 )
