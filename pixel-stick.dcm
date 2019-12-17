@@ -1,0 +1,17 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP RT9361A
+D 100mA Regulated Charge Pump
+F https://media.digikey.com/pdf/Data%20Sheets/Diodes%20PDFs/AP3602A_B.pdf
+$ENDCMP
+#
+$CMP RT9361B
+D 100mA Regulated Charge Pump
+$ENDCMP
+#
+$CMP VIN
+D Power symbol creates a global label with name "+5V"
+K power-flag
+$ENDCMP
+#
+#End Doc Library
