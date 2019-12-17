@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:pixel-stick-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -115,7 +115,7 @@ U 1 1 5DFF0485
 P 1900 1700
 F 0 "J1" H 1980 1742 50  0000 L CNN
 F 1 "WS281*" H 1980 1651 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1900 1700 50  0001 C CNN
+F 2 "Connector_JST:JST_PH_S3B-PH-K_1x03_P2.00mm_Horizontal" H 1900 1700 50  0001 C CNN
 F 3 "~" H 1900 1700 50  0001 C CNN
 	1    1900 1700
 	1    0    0    -1  
