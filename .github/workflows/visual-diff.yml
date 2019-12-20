@@ -13,9 +13,9 @@ jobs:
       uses: avsm/setup-ocaml@v1.0
       with:
         ocaml-version: 4.06.0
-    - name: Setup Plot Kicad
+    - name: Install Plot Kicad Schematic
       run: |
-        opam install plotgitsch
         opam install plotkicadsch
+        eval $(opam env)
     - name: Generate Visual Diff
       run: plotgitsch -k -o ./diff
