@@ -12,10 +12,10 @@ jobs:
     - name: Setup Python environment
       uses: actions/setup-python@v1.1.1
     - name: Checkout PCBDraw
-      uses: actions/checkout@v2.0.0
+      uses: actions/checkout@v1
       with:
         repository: yaqwsx/pcbdraw
-    - uses: actions/checkout@2.0.0
+    - uses: actions/checkout@1
       with:
         repository: yaqwsx/pcbdraw-lib
     - name: Generate Board
