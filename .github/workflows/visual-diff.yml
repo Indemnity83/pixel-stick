@@ -9,13 +9,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Setup OCaml
-      uses: avsm/setup-ocaml@v1.0
+    - name: Setup Python environment
+      uses: actions/setup-python@v1.1.1
+    - name: Checkout PCBDraw
+      uses: actions/checkout@v2.0.0
       with:
-        ocaml-version: 4.06.0
-    - name: Install Plot Kicad Schematic
-      run: |
-        opam install plotkicadsch
-        eval $(opam env)
-    - name: Generate Visual Diff
-      run: plotgitsch -k -o ./diff
+        repository: yaqwsx/pcbdraw
+    - uses: actions/checkout@2.0.0
+      with:
+        repository: yaqwsx/pcbdraw-lib
+    - name: Generate Board
+      run: ./pcbdraw/pcbdraw/pcbdraw.py ./pcbdraw-lib/KiCAD-base pixel-stick.kicad_pcb pixel-stick.svg
