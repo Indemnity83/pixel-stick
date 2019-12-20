@@ -17,4 +17,5 @@ jobs:
       run: |
         opam update
         opam install plotkicadsch
-    
+    - name: Generate Visual Diff
+      run: plotgitsch -k -o ./diff
