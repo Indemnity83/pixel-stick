@@ -1,0 +1,22 @@
+name: Generate Visual Diff
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        repository: jnavila/plotkicadsch
+    - name: Setup OCaml
+      uses: avsm/setup-ocaml@v1.0
+      with:
+        ocaml-version: 4.06.0
+    - name: Setup Plot Kicad
+      run: |
+        opam update
+        opam install plotkicadsch
+    
