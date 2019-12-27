@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:pixel-stick-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -425,16 +425,11 @@ F 3 "" H 2400 5200 50  0001 C CNN
 	1    2400 5200
 	1    0    0    -1  
 $EndComp
-Text Label 3350 4000 0    50   ~ 0
+Text Label 3550 4000 2    50   ~ 0
 RST
-Text Label 6150 5050 2    50   ~ 0
-TXD
-Text Label 6150 5150 2    50   ~ 0
-RXD
-Text Label 3350 4500 0    50   ~ 0
+Text Label 3550 4500 2    50   ~ 0
 GPIO0
 NoConn ~ 1800 4100
-NoConn ~ 1800 4200
 NoConn ~ 1800 4300
 NoConn ~ 1800 4400
 NoConn ~ 1800 4500
@@ -446,16 +441,16 @@ Wire Wire Line
 Wire Wire Line
 	3000 4500 3550 4500
 Wire Wire Line
-	1250 4700 1800 4700
+	1400 4700 1800 4700
 $Comp
 L Device:C C6
 U 1 1 5E0AA9FC
-P 4500 5000
-F 0 "C6" V 4350 5000 50  0000 C CNN
-F 1 "22µF" V 4650 5000 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 4538 4850 50  0001 C CNN
-F 3 "~" H 4500 5000 50  0001 C CNN
-	1    4500 5000
+P 4400 5000
+F 0 "C6" V 4250 5000 50  0000 C CNN
+F 1 "22µF" V 4550 5000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4438 4850 50  0001 C CNN
+F 3 "~" H 4400 5000 50  0001 C CNN
+	1    4400 5000
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -470,64 +465,55 @@ F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1450 5950 1250 5950
+	1450 5950 1350 5950
 Wire Wire Line
-	1450 6150 1250 6150
-NoConn ~ 1450 6050
-Text Label 1450 6150 2    50   ~ 0
+	1450 6150 1350 6150
+Text Label 1350 6150 0    50   ~ 0
 RST
 Wire Wire Line
 	3350 5950 3550 5950
-Text Label 3350 4600 0    50   ~ 0
-GPIO2
-Wire Wire Line
-	3350 6050 3550 6050
 Wire Wire Line
 	3350 6150 3550 6150
 Wire Wire Line
 	3350 6250 3550 6250
-Text Label 3350 6050 0    50   ~ 0
-GPIO2
-Text Label 3350 6150 0    50   ~ 0
+Text Label 3550 6150 2    50   ~ 0
 GPIO0
-Text Label 3350 6250 0    50   ~ 0
+Text Label 3550 6250 2    50   ~ 0
 RXD
-Wire Wire Line
-	3000 4600 3550 4600
 Wire Wire Line
 	3000 4100 3550 4100
 Wire Wire Line
 	3000 4200 3550 4200
-Text Label 3350 4100 0    50   ~ 0
+Text Label 3550 4100 2    50   ~ 0
 TXD
-Text Label 3350 4200 0    50   ~ 0
+Text Label 3550 4200 2    50   ~ 0
 RXD
 $Comp
 L power:+3V3 #PWR0114
 U 1 1 5DFF4121
-P 4500 4450
-F 0 "#PWR0114" H 4500 4300 50  0001 C CNN
-F 1 "+3V3" H 4515 4623 50  0000 C CNN
-F 2 "" H 4500 4450 50  0001 C CNN
-F 3 "" H 4500 4450 50  0001 C CNN
-	1    4500 4450
+P 4400 4450
+F 0 "#PWR0114" H 4400 4300 50  0001 C CNN
+F 1 "+3V3" H 4415 4623 50  0000 C CNN
+F 2 "" H 4400 4450 50  0001 C CNN
+F 3 "" H 4400 4450 50  0001 C CNN
+	1    4400 4450
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0115
 U 1 1 5DFF47D8
-P 4500 5450
-F 0 "#PWR0115" H 4500 5200 50  0001 C CNN
-F 1 "GND" H 4505 5277 50  0000 C CNN
-F 2 "" H 4500 5450 50  0001 C CNN
-F 3 "" H 4500 5450 50  0001 C CNN
-	1    4500 5450
+P 4400 5450
+F 0 "#PWR0115" H 4400 5200 50  0001 C CNN
+F 1 "GND" H 4405 5277 50  0000 C CNN
+F 2 "" H 4400 5450 50  0001 C CNN
+F 3 "" H 4400 5450 50  0001 C CNN
+	1    4400 5450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 4450 4500 4850
+	4400 4450 4400 4850
 Wire Wire Line
-	4500 5150 4500 5450
+	4400 5150 4400 5450
 $Comp
 L power:+3V3 #PWR0118
 U 1 1 5DFFDC92
@@ -540,86 +526,18 @@ F 3 "" H 4950 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4950 4450 4950 4850
-Text Label 4950 5500 1    50   ~ 0
-GPIO2
-Wire Wire Line
 	1250 6250 1450 6250
-Text Label 1450 5950 2    50   ~ 0
-TXD
 Wire Wire Line
 	2400 5050 2400 5200
 $Comp
-L Device:R R3
-U 1 1 5E035CEC
-P 4950 5000
-F 0 "R3" H 5020 5046 50  0000 L CNN
-F 1 "10k" H 5020 4955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 4880 5000 50  0001 C CNN
-F 3 "~" H 4950 5000 50  0001 C CNN
-	1    4950 5000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4950 5150 4950 5500
-Wire Wire Line
-	5950 5150 6350 5150
-Wire Wire Line
-	5950 5050 6350 5050
-$Comp
-L Connector_Generic:Conn_01x06 J2
-U 1 1 5E04C499
-P 6550 4950
-F 0 "J2" H 6630 4942 50  0000 L CNN
-F 1 "UART" H 6630 4851 50  0000 L CNN
-F 2 "" H 6550 4950 50  0001 C CNN
-F 3 "~" H 6550 4950 50  0001 C CNN
-	1    6550 4950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6350 4750 5950 4750
-Wire Wire Line
-	6350 4850 5950 4850
-Wire Wire Line
-	6350 4950 5950 4950
-Wire Wire Line
-	6350 5250 5950 5250
-$Comp
-L power:GND #PWR?
-U 1 1 5E055E41
-P 5950 4750
-F 0 "#PWR?" H 5950 4500 50  0001 C CNN
-F 1 "GND" V 5950 4500 50  0000 C CNN
-F 2 "" H 5950 4750 50  0001 C CNN
-F 3 "" H 5950 4750 50  0001 C CNN
-	1    5950 4750
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3V3 #PWR?
-U 1 1 5E05623C
-P 5950 4950
-F 0 "#PWR?" H 5950 4800 50  0001 C CNN
-F 1 "+3V3" V 5950 5200 50  0000 C CNN
-F 2 "" H 5950 4950 50  0001 C CNN
-F 3 "" H 5950 4950 50  0001 C CNN
-	1    5950 4950
-	0    -1   -1   0   
-$EndComp
-Text Label 6000 4850 0    50   ~ 0
-GPIO0
-Text Label 6000 5250 0    50   ~ 0
-RST
-$Comp
 L power:+3V3 #PWR0117
 U 1 1 5E084605
-P 1250 4700
-F 0 "#PWR0117" H 1250 4550 50  0001 C CNN
-F 1 "+3V3" V 1250 4950 50  0000 C CNN
-F 2 "" H 1250 4700 50  0001 C CNN
-F 3 "" H 1250 4700 50  0001 C CNN
-	1    1250 4700
+P 1400 4700
+F 0 "#PWR0117" H 1400 4550 50  0001 C CNN
+F 1 "+3V3" V 1400 4950 50  0000 C CNN
+F 2 "" H 1400 4700 50  0001 C CNN
+F 3 "" H 1400 4700 50  0001 C CNN
+	1    1400 4700
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -657,4 +575,97 @@ F 3 "" H 3550 4700 50  0001 C CNN
 	1    3550 4700
 	0    -1   -1   0   
 $EndComp
+NoConn ~ 3000 4600
+NoConn ~ 3350 6050
+Wire Wire Line
+	1450 6050 1350 6050
+Text Label 1350 5950 0    50   ~ 0
+TXD
+Text Label 1350 6050 0    50   ~ 0
+EN
+Wire Wire Line
+	1800 4200 1350 4200
+Text Label 6000 5250 0    50   ~ 0
+RST
+Text Label 6000 4850 0    50   ~ 0
+GPIO0
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 5E05623C
+P 5950 4950
+F 0 "#PWR0101" H 5950 4800 50  0001 C CNN
+F 1 "+3V3" V 5950 5200 50  0000 C CNN
+F 2 "" H 5950 4950 50  0001 C CNN
+F 3 "" H 5950 4950 50  0001 C CNN
+	1    5950 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5E055E41
+P 5950 4750
+F 0 "#PWR0112" H 5950 4500 50  0001 C CNN
+F 1 "GND" V 5950 4500 50  0000 C CNN
+F 2 "" H 5950 4750 50  0001 C CNN
+F 3 "" H 5950 4750 50  0001 C CNN
+	1    5950 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6350 5250 5950 5250
+Wire Wire Line
+	6350 4950 5950 4950
+Wire Wire Line
+	6350 4850 5950 4850
+Wire Wire Line
+	6350 4750 5950 4750
+$Comp
+L Connector_Generic:Conn_01x06 J2
+U 1 1 5E04C499
+P 6550 4950
+F 0 "J2" H 6630 4942 50  0000 L CNN
+F 1 "UART" H 6630 4851 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 6550 4950 50  0001 C CNN
+F 3 "~" H 6550 4950 50  0001 C CNN
+	1    6550 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 5050 6350 5050
+Wire Wire Line
+	5950 5150 6350 5150
+Text Label 6150 5150 2    50   ~ 0
+RXD
+Text Label 6150 5050 2    50   ~ 0
+TXD
+Text Label 1350 4200 0    50   ~ 0
+EN
+Wire Wire Line
+	4800 4850 4800 5450
+Text Label 4800 5450 1    50   ~ 0
+EN
+Text Label 5100 5450 1    50   ~ 0
+RST
+Wire Wire Line
+	4950 4850 4800 4850
+Wire Wire Line
+	4950 4450 4950 4850
+Connection ~ 4950 4850
+Wire Wire Line
+	5100 4850 5100 4950
+Wire Wire Line
+	5100 4850 4950 4850
+$Comp
+L Device:R R?
+U 1 1 5E0A32DA
+P 5100 5100
+F 0 "R?" H 5170 5146 50  0000 L CNN
+F 1 "10k" H 5170 5055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5030 5100 50  0001 C CNN
+F 3 "~" H 5100 5100 50  0001 C CNN
+	1    5100 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 5250 5100 5450
 $EndSCHEMATC
