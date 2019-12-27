@@ -17,12 +17,12 @@ $EndDescr
 $Comp
 L Device:C C2
 U 1 1 5DE99CA9
-P 3600 1800
-F 0 "C2" H 3715 1846 50  0000 L CNN
-F 1 "10µF" H 3715 1755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3638 1650 50  0001 C CNN
-F 3 "~" H 3600 1800 50  0001 C CNN
-	1    3600 1800
+P 4800 1800
+F 0 "C2" H 4915 1846 50  0000 L CNN
+F 1 "10µF" H 4915 1755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4838 1650 50  0001 C CNN
+F 3 "~" H 4800 1800 50  0001 C CNN
+	1    4800 1800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -145,17 +145,6 @@ Wire Wire Line
 	1550 1800 1700 1800
 Wire Wire Line
 	3600 1350 3600 1500
-$Comp
-L Regulator_Switching:LM3670MF U1
-U 1 1 5DFB108A
-P 4300 1600
-F 0 "U1" H 4300 1925 50  0000 C CNN
-F 1 "LM3670MF" H 4300 1834 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4350 1350 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm3670.pdf" H 4050 1250 50  0001 C CNN
-	1    4300 1600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3600 1500 3900 1500
 Wire Wire Line
@@ -178,9 +167,6 @@ F 3 "" H 5350 1350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5350 1350 5350 1500
-Wire Wire Line
-	3600 1650 3600 1500
-Connection ~ 3600 1500
 $Comp
 L power:GND #PWR0106
 U 1 1 5DFBC6EA
@@ -193,43 +179,17 @@ F 3 "" H 4300 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3600 1950 3600 2050
-Wire Wire Line
 	4300 1900 4300 2050
-$Comp
-L Device:L L1
-U 1 1 5DFBEF31
-P 4850 1500
-F 0 "L1" V 4950 1500 50  0000 C CNN
-F 1 "2.2uH" V 4800 1500 50  0000 C CNN
-F 2 "Inductor_SMD:L_Taiyo-Yuden_MD-2020" H 4850 1500 50  0001 C CNN
-F 3 "~" H 4850 1500 50  0001 C CNN
-	1    4850 1500
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	4600 1500 4700 1500
-Wire Wire Line
-	5000 1500 5150 1500
 Connection ~ 5350 1500
 Wire Wire Line
 	5350 1500 5350 1650
 Wire Wire Line
-	4600 1700 5150 1700
-Wire Wire Line
-	5150 1700 5150 1500
-Connection ~ 5150 1500
-Wire Wire Line
-	5150 1500 5350 1500
-Wire Wire Line
 	5350 1950 5350 2050
 Wire Wire Line
-	5350 2050 4300 2050
+	5350 2050 4800 2050
 Connection ~ 4300 2050
 Wire Wire Line
 	4300 2050 4300 2250
-Wire Wire Line
-	4300 2050 3600 2050
 $Comp
 L Device:C C1
 U 1 1 5DFD8960
@@ -656,10 +616,10 @@ Wire Wire Line
 Wire Wire Line
 	5100 4850 4950 4850
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 5E0A32DA
 P 5100 5100
-F 0 "R?" H 5170 5146 50  0000 L CNN
+F 0 "R3" H 5170 5146 50  0000 L CNN
 F 1 "10k" H 5170 5055 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 5030 5100 50  0001 C CNN
 F 3 "~" H 5100 5100 50  0001 C CNN
@@ -668,4 +628,26 @@ F 3 "~" H 5100 5100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5100 5250 5100 5450
+$Comp
+L Regulator_Linear:SPX3819M5-L-3-3 U1
+U 1 1 5E0AB735
+P 4300 1600
+F 0 "U1" H 4300 1942 50  0000 C CNN
+F 1 "SPX3819M5-L-3-3" H 4300 1851 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4300 1925 50  0001 C CNN
+F 3 "https://www.exar.com/content/document.ashx?id=22106&languageid=1033&type=Datasheet&partnumber=SPX3819&filename=SPX3819.pdf&part=SPX3819" H 4300 1600 50  0001 C CNN
+	1    4300 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 1600 4800 1600
+Wire Wire Line
+	4800 1600 4800 1650
+Wire Wire Line
+	4800 1950 4800 2050
+Connection ~ 4800 2050
+Wire Wire Line
+	4800 2050 4300 2050
+Wire Wire Line
+	4600 1500 5350 1500
 $EndSCHEMATC
