@@ -224,11 +224,6 @@ Digital IO
 Text Notes 1850 6050 0    157  ~ 0
 WiFi Microcontroller
 Wire Wire Line
-	2300 4200 2250 4200
-Connection ~ 2300 4200
-Wire Wire Line
-	2300 4200 2300 4350
-Wire Wire Line
 	1350 5000 1350 5400
 Wire Wire Line
 	1350 4350 1350 4700
@@ -252,9 +247,7 @@ GPIO0
 Text Label 4350 4200 2    50   ~ 0
 GPIO2
 Wire Wire Line
-	2400 4350 2300 4350
-Wire Wire Line
-	2400 4200 2300 4200
+	2400 4350 2050 4350
 Wire Wire Line
 	2050 4800 2400 4800
 Wire Wire Line
@@ -442,4 +435,36 @@ Wire Wire Line
 Connection ~ 7400 4250
 Wire Wire Line
 	7400 4250 7400 4150
+Wire Wire Line
+	2250 4200 2400 4200
+Text Label 2050 4350 0    50   ~ 0
+EN
+Wire Wire Line
+	4800 5000 4800 5400
+Wire Wire Line
+	4800 4350 4800 4700
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5E165006
+P 4800 4350
+F 0 "#PWR0102" H 4800 4200 50  0001 C CNN
+F 1 "+3.3V" V 4815 4478 50  0000 L CNN
+F 2 "" H 4800 4350 50  0001 C CNN
+F 3 "" H 4800 4350 50  0001 C CNN
+	1    4800 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E167003
+P 4800 4850
+F 0 "R3" H 4870 4896 50  0000 L CNN
+F 1 "10k" H 4870 4805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4730 4850 50  0001 C CNN
+F 3 "~" H 4800 4850 50  0001 C CNN
+	1    4800 4850
+	1    0    0    -1  
+$EndComp
+Text Label 4800 5400 1    50   ~ 0
+EN
 $EndSCHEMATC
