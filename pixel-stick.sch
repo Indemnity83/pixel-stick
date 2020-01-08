@@ -111,19 +111,6 @@ Wire Wire Line
 Wire Wire Line
 	8350 2300 7900 2300
 Connection ~ 8350 2300
-$Comp
-L Device:Polyfuse F1
-U 1 1 5DEDDCE1
-P 3700 1650
-F 0 "F1" V 3800 1600 50  0000 L CNN
-F 1 "Polyfuse" V 3550 1500 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3750 1450 50  0001 L CNN
-F 3 "~" H 3700 1650 50  0001 C CNN
-	1    3700 1650
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3550 1650 3200 1650
 Text Label 3350 1650 2    50   ~ 0
 VIN
 $Comp
@@ -157,7 +144,7 @@ L Device:CP1 C1
 U 1 1 5DEF5F98
 P 4150 2000
 F 0 "C1" H 4265 2046 50  0000 L CNN
-F 1 "100µF" H 4265 1955 50  0000 L CNN
+F 1 "1000µF" H 4265 1955 50  0000 L CNN
 F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 4150 2000 50  0001 C CNN
 F 3 "~" H 4150 2000 50  0001 C CNN
 	1    4150 2000
@@ -198,8 +185,6 @@ Wire Wire Line
 Wire Wire Line
 	6300 1650 6650 1650
 Connection ~ 4150 1650
-Wire Wire Line
-	3850 1650 4150 1650
 $Comp
 L power:+5V #PWR012
 U 1 1 5DEDB519
@@ -467,4 +452,6 @@ F 3 "~" H 4800 4850 50  0001 C CNN
 $EndComp
 Text Label 4800 5400 1    50   ~ 0
 EN
+Wire Wire Line
+	3200 1650 4150 1650
 $EndSCHEMATC
