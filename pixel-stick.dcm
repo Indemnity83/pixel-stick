@@ -1,0 +1,20 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP RT9361AGE
+D Switched capacitor boost, Fixed 5V output, 110mA, SOT-23-6
+K Switched capacitor boost
+F https://www.richtek.com/assets/product_file/RT9361A=RT9361B/DS9361AB-14.pdf
+$ENDCMP
+#
+$CMP RT9361BGE
+D Switched capacitor boost, Fixed 4.5V output, 150mA, SOT-23-6
+K Switched capacitor boost
+F https://www.richtek.com/assets/product_file/RT9361A=RT9361B/DS9361AB-14.pdf
+$ENDCMP
+#
+$CMP VIN
+D Power symbol creates a global label with name "+3V3"
+K power-flag
+$ENDCMP
+#
+#End Doc Library
