@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 29 0
+LIBS:pixel-stick-cache
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -14,23 +15,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Regulator_Linear:AZ1117-3.3 U1
-U 1 1 5DE96EF7
-P 7050 1400
-F 0 "U1" H 7050 1642 50  0000 C CNN
-F 1 "AZ1117-3.3" H 7050 1551 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 7050 1650 50  0001 C CIN
-F 3 "https://www.diodes.com/assets/Datasheets/AZ1117.pdf" H 7050 1400 50  0001 C CNN
-	1    7050 1400
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C2
 U 1 1 5DE99CA9
 P 6300 1700
 F 0 "C2" H 6415 1746 50  0000 L CNN
 F 1 "1µF" H 6415 1655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6338 1550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6338 1550 50  0001 C CNN
 F 3 "~" H 6300 1700 50  0001 C CNN
 	1    6300 1700
 	1    0    0    -1  
@@ -41,7 +31,7 @@ U 1 1 5DE9A199
 P 7800 1700
 F 0 "C3" H 7915 1746 50  0000 L CNN
 F 1 "10µF" H 7915 1655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7838 1550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7838 1550 50  0001 C CNN
 F 3 "~" H 7800 1700 50  0001 C CNN
 	1    7800 1700
 	1    0    0    -1  
@@ -60,14 +50,14 @@ $EndComp
 Wire Wire Line
 	6300 1550 6300 1400
 Wire Wire Line
-	6300 1400 6750 1400
+	6300 1400 6650 1400
 Wire Wire Line
 	6300 1850 6300 2050
 Wire Wire Line
 	6300 2050 7050 2050
 Connection ~ 7050 2050
 Wire Wire Line
-	7050 2050 7050 1700
+	7050 2050 7050 1800
 Wire Wire Line
 	7050 2050 7800 2050
 Wire Wire Line
@@ -111,7 +101,7 @@ U 1 1 5DEB48EA
 P 9650 1750
 F 0 "C5" H 9765 1796 50  0000 L CNN
 F 1 "10µF" H 9765 1705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9688 1600 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9688 1600 50  0001 C CNN
 F 3 "~" H 9650 1750 50  0001 C CNN
 	1    9650 1750
 	1    0    0    -1  
@@ -121,8 +111,8 @@ L Device:CP1 C1
 U 1 1 5DEF5F98
 P 5500 1750
 F 0 "C1" H 5615 1796 50  0000 L CNN
-F 1 "1000µF" H 5615 1705 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 5500 1750 50  0001 C CNN
+F 1 "470µF" H 5615 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_Elec_6.3x7.7" H 5500 1750 50  0001 C CNN
 F 3 "~" H 5500 1750 50  0001 C CNN
 	1    5500 1750
 	1    0    0    -1  
@@ -195,7 +185,7 @@ U 1 1 5DE9F007
 P 1500 4000
 F 0 "C6" H 1615 4046 50  0000 L CNN
 F 1 "10µF" H 1615 3955 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1538 3850 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1538 3850 50  0001 C CNN
 F 3 "~" H 1500 4000 50  0001 C CNN
 	1    1500 4000
 	1    0    0    -1  
@@ -227,7 +217,7 @@ U 1 1 5DEB5F38
 P 8800 2150
 F 0 "C4" V 8650 2150 50  0000 C CNN
 F 1 "1µF" V 8950 2150 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8838 2000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8838 2000 50  0001 C CNN
 F 3 "~" H 8800 2150 50  0001 C CNN
 	1    8800 2150
 	0    1    1    0   
@@ -653,4 +643,23 @@ Wire Wire Line
 Wire Wire Line
 	7800 1400 8250 1400
 Connection ~ 8250 1400
+$Comp
+L Regulator_Linear:SPX3819M5-L-3-3 U1
+U 1 1 5E17FCE5
+P 7050 1500
+F 0 "U1" H 7050 1842 50  0000 C CNN
+F 1 "SPX3819M5-L-3-3" H 7050 1751 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7050 1825 50  0001 C CNN
+F 3 "https://www.exar.com/content/document.ashx?id=22106&languageid=1033&type=Datasheet&partnumber=SPX3819&filename=SPX3819.pdf&part=SPX3819" H 7050 1500 50  0001 C CNN
+	1    7050 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 1500 6650 1500
+Wire Wire Line
+	6650 1500 6650 1400
+Connection ~ 6650 1400
+Wire Wire Line
+	6650 1400 6750 1400
+NoConn ~ 7350 1500
 $EndSCHEMATC
