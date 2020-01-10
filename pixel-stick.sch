@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:pixel-stick-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -111,8 +111,8 @@ L Device:CP1 C1
 U 1 1 5DEF5F98
 P 5500 1750
 F 0 "C1" H 5615 1796 50  0000 L CNN
-F 1 "470µF" H 5615 1705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_Elec_6.3x7.7" H 5500 1750 50  0001 C CNN
+F 1 "1000µF" H 5615 1705 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 5500 1750 50  0001 C CNN
 F 3 "~" H 5500 1750 50  0001 C CNN
 	1    5500 1750
 	1    0    0    -1  
@@ -228,7 +228,7 @@ U 1 1 5DFF0485
 P 2650 1600
 F 0 "J1" H 2730 1642 50  0000 L CNN
 F 1 "WS2811" H 2730 1551 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x03_P3.81mm_Drill1.2mm" H 2650 1600 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 2650 1600 50  0001 C CNN
 F 3 "~" H 2650 1600 50  0001 C CNN
 	1    2650 1600
 	1    0    0    -1  
@@ -415,12 +415,12 @@ $EndComp
 $Comp
 L power:+3.3V #PWR0106
 U 1 1 5E1A778D
-P 9700 4650
-F 0 "#PWR0106" H 9700 4500 50  0001 C CNN
-F 1 "+3.3V" V 9715 4778 50  0000 L CNN
-F 2 "" H 9700 4650 50  0001 C CNN
-F 3 "" H 9700 4650 50  0001 C CNN
-	1    9700 4650
+P 9700 4550
+F 0 "#PWR0106" H 9700 4400 50  0001 C CNN
+F 1 "+3.3V" V 9715 4678 50  0000 L CNN
+F 2 "" H 9700 4550 50  0001 C CNN
+F 3 "" H 9700 4550 50  0001 C CNN
+	1    9700 4550
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -437,22 +437,22 @@ $EndComp
 Wire Wire Line
 	10000 4450 9700 4450
 Wire Wire Line
-	10000 4650 9700 4650
-Wire Wire Line
 	10000 4550 9700 4550
+Wire Wire Line
+	10000 4950 9700 4950
 Wire Wire Line
 	10000 4750 9700 4750
 Wire Wire Line
 	10000 4850 9700 4850
 Wire Wire Line
-	10000 4950 9700 4950
+	10000 4650 9700 4650
 Text Label 9700 4750 0    50   ~ 0
 RXD
 Text Label 9700 4850 0    50   ~ 0
 TXD
-Text Label 9700 4550 0    50   ~ 0
-EN
 Text Label 9700 4950 0    50   ~ 0
+EN
+Text Label 9700 4650 0    50   ~ 0
 GPIO0
 Text Notes 9250 5500 0    157  ~ 0
 Prog Header
