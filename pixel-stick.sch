@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:pixel-stick-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -228,7 +228,7 @@ U 1 1 5DFF0485
 P 2650 1600
 F 0 "J1" H 2730 1642 50  0000 L CNN
 F 1 "WS2811" H 2730 1551 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 2650 1600 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2650 1600 50  0001 C CNN
 F 3 "~" H 2650 1600 50  0001 C CNN
 	1    2650 1600
 	1    0    0    -1  
@@ -401,61 +401,6 @@ F 3 "" H 5150 6800 50  0001 C CNN
 	1    5150 6800
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x06 J2
-U 1 1 5E1A6B59
-P 10200 4650
-F 0 "J2" H 10280 4642 50  0000 L CNN
-F 1 "Conn_01x06" H 10280 4551 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 10200 4650 50  0001 C CNN
-F 3 "~" H 10200 4650 50  0001 C CNN
-	1    10200 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0106
-U 1 1 5E1A778D
-P 9700 4550
-F 0 "#PWR0106" H 9700 4400 50  0001 C CNN
-F 1 "+3.3V" V 9715 4678 50  0000 L CNN
-F 2 "" H 9700 4550 50  0001 C CNN
-F 3 "" H 9700 4550 50  0001 C CNN
-	1    9700 4550
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0107
-U 1 1 5E1A8422
-P 9700 4450
-F 0 "#PWR0107" H 9700 4200 50  0001 C CNN
-F 1 "GND" V 9700 4200 50  0000 C CNN
-F 2 "" H 9700 4450 50  0001 C CNN
-F 3 "" H 9700 4450 50  0001 C CNN
-	1    9700 4450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	10000 4450 9700 4450
-Wire Wire Line
-	10000 4550 9700 4550
-Wire Wire Line
-	10000 4950 9700 4950
-Wire Wire Line
-	10000 4750 9700 4750
-Wire Wire Line
-	10000 4850 9700 4850
-Wire Wire Line
-	10000 4650 9700 4650
-Text Label 9700 4750 0    50   ~ 0
-RXD
-Text Label 9700 4850 0    50   ~ 0
-TXD
-Text Label 9700 4950 0    50   ~ 0
-EN
-Text Label 9700 4650 0    50   ~ 0
-GPIO0
-Text Notes 9250 5500 0    157  ~ 0
-Prog Header
 Wire Wire Line
 	4300 3850 4650 3850
 $Comp
