@@ -228,7 +228,7 @@ U 1 1 5DFF0485
 P 2650 1600
 F 0 "J1" H 2730 1642 50  0000 L CNN
 F 1 "WS2811" H 2730 1551 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2650 1600 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 2650 1600 50  0001 C CNN
 F 3 "~" H 2650 1600 50  0001 C CNN
 	1    2650 1600
 	1    0    0    -1  
