@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:pixel-stick-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -140,35 +139,6 @@ Wire Wire Line
 Wire Wire Line
 	1500 3500 1500 3850
 $Comp
-L power:+3.3V #PWR010
-U 1 1 5DEA7FFE
-P 2400 4150
-F 0 "#PWR010" H 2400 4000 50  0001 C CNN
-F 1 "+3.3V" V 2415 4278 50  0000 L CNN
-F 2 "" H 2400 4150 50  0001 C CNN
-F 3 "" H 2400 4150 50  0001 C CNN
-	1    2400 4150
-	0    -1   -1   0   
-$EndComp
-Text Label 4500 4150 2    50   ~ 0
-RXD
-Text Label 2200 3850 0    50   ~ 0
-TXD
-Text Label 4500 4050 2    50   ~ 0
-GPIO0
-Text Label 4500 3950 2    50   ~ 0
-GPIO2
-Wire Wire Line
-	2400 3950 2200 3950
-Wire Wire Line
-	4500 4150 4300 4150
-Wire Wire Line
-	2200 3850 2400 3850
-Wire Wire Line
-	4300 4050 4500 4050
-Wire Wire Line
-	4300 3950 4500 3950
-$Comp
 L power:GND #PWR013
 U 1 1 5DEA0257
 P 1500 4550
@@ -188,17 +158,6 @@ F 1 "10µF" H 1615 3955 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 1538 3850 50  0001 C CNN
 F 3 "~" H 1500 4000 50  0001 C CNN
 	1    1500 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L ESP8266:ESP-01v090 ESP-1
-U 1 1 5DE9E498
-P 3350 4000
-F 0 "ESP-1" H 3350 4550 50  0000 C CNN
-F 1 "ESP-01v090" H 3350 4450 50  0000 C CNN
-F 2 "ESP8266:ESP-01" H 3350 4000 50  0001 C CNN
-F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 3350 4000 50  0001 C CNN
-	1    3350 4000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -222,21 +181,6 @@ F 3 "~" H 8800 2150 50  0001 C CNN
 	1    8800 2150
 	0    1    1    0   
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x03 J1
-U 1 1 5DFF0485
-P 2650 1600
-F 0 "J1" H 2730 1642 50  0000 L CNN
-F 1 "WS2811" H 2730 1551 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 2650 1600 50  0001 C CNN
-F 3 "~" H 2650 1600 50  0001 C CNN
-	1    2650 1600
-	1    0    0    -1  
-$EndComp
-Text Label 2050 1600 0    50   ~ 0
-DATA
-Wire Wire Line
-	2000 1600 2450 1600
 $Comp
 L Transistor_FET:BSS138 Q1
 U 1 1 5E162D20
@@ -291,8 +235,6 @@ Wire Wire Line
 Connection ~ 6650 4200
 Wire Wire Line
 	6650 4200 6650 4100
-Text Label 2200 3950 0    50   ~ 0
-EN
 Wire Wire Line
 	5150 4150 5150 4550
 Wire Wire Line
@@ -354,8 +296,6 @@ GPIO0
 Text Label 4500 5550 2    50   ~ 0
 GPIO2
 Wire Wire Line
-	3950 5350 4500 5350
-Wire Wire Line
 	3950 5550 4500 5550
 Text Label 4500 6250 2    50   ~ 0
 GPIO15
@@ -401,21 +341,6 @@ F 3 "" H 5150 6800 50  0001 C CNN
 	1    5150 6800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4300 3850 4650 3850
-$Comp
-L power:GND #PWR014
-U 1 1 5DEA2B31
-P 4650 3850
-F 0 "#PWR014" H 4650 3600 50  0001 C CNN
-F 1 "GND" H 4655 3677 50  0000 C CNN
-F 2 "" H 4650 3850 50  0001 C CNN
-F 3 "" H 4650 3850 50  0001 C CNN
-	1    4650 3850
-	0    -1   -1   0   
-$EndComp
-NoConn ~ 2400 4050
-NoConn ~ 2750 5350
 NoConn ~ 2750 5750
 NoConn ~ 2750 5950
 NoConn ~ 2750 6050
@@ -522,36 +447,6 @@ F 3 "" H 1500 3500 50  0001 C CNN
 	1    1500 3500
 	1    0    0    -1  
 $EndComp
-$Comp
-L pixel-stick:VIN #PWR0114
-U 1 1 5E1C5F60
-P 2200 1400
-F 0 "#PWR0114" H 2200 1250 50  0001 C CNN
-F 1 "VIN" H 2215 1573 50  0000 C CNN
-F 2 "" H 2200 1400 50  0001 C CNN
-F 3 "" H 2200 1400 50  0001 C CNN
-	1    2200 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0115
-U 1 1 5E1C6857
-P 2200 1800
-F 0 "#PWR0115" H 2200 1550 50  0001 C CNN
-F 1 "GND" H 2205 1627 50  0000 C CNN
-F 2 "" H 2200 1800 50  0001 C CNN
-F 3 "" H 2200 1800 50  0001 C CNN
-	1    2200 1800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 1800 2200 1700
-Wire Wire Line
-	2200 1700 2450 1700
-Wire Wire Line
-	2200 1400 2200 1500
-Wire Wire Line
-	2200 1500 2450 1500
 Text Notes 1550 2850 0    157  ~ 0
 WS281* Header
 $Comp
@@ -607,4 +502,105 @@ Connection ~ 6650 1400
 Wire Wire Line
 	6650 1400 6750 1400
 NoConn ~ 7350 1500
+Wire Wire Line
+	3950 5350 4500 5350
+NoConn ~ 6500 1250
+Wire Wire Line
+	2750 5350 2200 5350
+Text Label 2200 5350 0    50   ~ 0
+~RST
+Text Label 9100 4400 0    50   ~ 0
+GND
+Wire Wire Line
+	9400 4400 9050 4400
+Text Label 9100 4200 0    50   ~ 0
+~RST
+Wire Wire Line
+	9400 4200 9050 4200
+Text Label 10250 4400 2    50   ~ 0
+RXD
+Wire Wire Line
+	9900 4400 10400 4400
+Text Label 9100 4300 0    50   ~ 0
+TXD
+Wire Wire Line
+	9400 4300 9050 4300
+$Comp
+L Connector_Generic:Conn_02x03_Counter_Clockwise J2
+U 1 1 5FB87FB4
+P 9600 4300
+F 0 "J2" H 9650 4617 50  0000 C CNN
+F 1 "Conn_02x03_Counter_Clockwise" H 9650 4526 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 9600 4300 50  0001 C CNN
+F 3 "~" H 9600 4300 50  0001 C CNN
+	1    9600 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 4300 10300 4300
+Wire Wire Line
+	9900 4200 10300 4200
+Text Label 10250 4200 2    50   ~ 0
+GPIO0
+Text Label 10250 4300 2    50   ~ 0
++3V3
+$Comp
+L Connector:Screw_Terminal_01x05 J3
+U 1 1 5FD96649
+P 2850 1600
+F 0 "J3" H 2930 1642 50  0000 L CNN
+F 1 "Screw_Terminal_01x05" H 2930 1551 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-5-2.54_1x05_P2.54mm_Horizontal" H 2850 1600 50  0001 C CNN
+F 3 "~" H 2850 1600 50  0001 C CNN
+	1    2850 1600
+	1    0    0    -1  
+$EndComp
+Text Label 1750 1600 0    50   ~ 0
+DATA
+$Comp
+L pixel-stick:VIN #PWR0106
+U 1 1 5FDBE78E
+P 1900 1400
+F 0 "#PWR0106" H 1900 1250 50  0001 C CNN
+F 1 "VIN" H 1915 1573 50  0000 C CNN
+F 2 "" H 1900 1400 50  0001 C CNN
+F 3 "" H 1900 1400 50  0001 C CNN
+	1    1900 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5FDBE794
+P 1900 1800
+F 0 "#PWR0107" H 1900 1550 50  0001 C CNN
+F 1 "GND" H 1905 1627 50  0000 C CNN
+F 2 "" H 1900 1800 50  0001 C CNN
+F 3 "" H 1900 1800 50  0001 C CNN
+	1    1900 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1800 1900 1700
+Wire Wire Line
+	1900 1400 1900 1500
+Wire Wire Line
+	1700 1600 2650 1600
+Wire Wire Line
+	1900 1700 2400 1700
+Wire Wire Line
+	2650 1800 2400 1800
+Wire Wire Line
+	2400 1800 2400 1700
+Connection ~ 2400 1700
+Wire Wire Line
+	2400 1700 2650 1700
+Wire Wire Line
+	1900 1500 2400 1500
+Wire Wire Line
+	2650 1400 2400 1400
+Wire Wire Line
+	2400 1400 2400 1500
+Connection ~ 2400 1500
+Wire Wire Line
+	2400 1500 2650 1500
 $EndSCHEMATC
